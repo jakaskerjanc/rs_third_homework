@@ -1,93 +1,41 @@
-# third_howework_cs
+# Third homework assignment
+
+## K-means clustering and image processing 
+
+The k-means algorithm is an unsupervised machine-learning technique used for clustering data into distinct groups based on similarities in their features. In image processing, K-means finds applications in tasks like image segmentation and color quantization. K-means can partition an image into segments with similar pixel values by treating each pixel as a data point in a high-dimensional space. This segmentation is beneficial in various image analysis tasks, such as object detection, image compression, and image enhancement. For instance, for color quantization, K-means clusters similar colors together, reducing the number of distinct colors in an image while preserving its visual quality. This makes the image easier to process and store without significant loss of information. The K-means algorithm offers an efficient and practical approach to analyzing and manipulating images in various applications.
+
+### Homework assignment 
+
+In this assignment, you will be tasked with implementing the vectorization of the K-means algorithm for grayscale-level quantization. The test image provided for evaluation is named "bosko_k-means.jpg," upon execution of the program, it will output an image "bosko_k-means.jpg" after processing. Within the codebase of the scalar version, two critical functions require vectorization. Firstly, the "assign_points_to_clusters" function assigns pixels to their nearest cluster based on the difference between each pixel and the cluster centroid. Secondly, the "update_centroids" function recalculates the centroids of clusters based on the pixels assigned to each cluster. The K-means algorithm iteratively applies these two functions until the change in centroid values falls below a specified threshold. Your task is to implement efficient vectorized versions of these functions to enhance the performance of the K-means algorithm for grayscale-level quantization.
+
+### Vectorize program 
+
+In the repository, you will find the scalar implementation of the K-means algorithm (k-means_sca.c). Using scalar implementation, explicitly vectorize the program using AVX/AV2 intrinsics. 
+
+### Evaluating the speedup from uttilizing AVX SIMD instructions 
+
+Using the rdtsc() function, your task is to assess the execution time of the K-means algorithm and compute the speedup achieved by the vectorized implementation compared to the scalar version. You are required to report the speedup ratio for the following scenarios:
+1. Utilizing 4 clusters with pixel data represented as 8-bit unsigned numbers.
+2. Utilizing 8 clusters with pixel data represented as 8-bit unsigned numbers.
+3. Utilizing 16 clusters with pixel data represented as 8-bit unsigned numbers.
+4. Utilizing 4 clusters with pixel data represented as single precision floating point numbers.
+5. Utilizing 8 clusters with pixel data represented as single precision floating point numbers.
+6. Utilizing 16 clusters with pixel data represented as single precision floating point numbers.
+7. Utilizing 4 clusters with pixel data represented as double precision floating point numbers.
+8. Utilizing 8 clusters with pixel data represented as double precision floating point numbers.
+9. Utilizing 16 clusters with pixel data represented as double precision floating point numbers.
+
+For each scenario, measure the execution time of both the scalar and vectorized versions of the K-means algorithm using rdtsc(), then calculate the ratio of execution times to determine the speedup achieved by vectorization. 
+
+### Bonus challenge: SIMD competition 
+
+To add a little bit of excitement, we will host a mini competition where you will be required to report the cycle counts of execution, averaged over ten attempts. You will submit your results' mean and standard deviation on the e-classroom platform. Additionally, the top five students with the shortest execution times will be awarded an additional 5 points. However, please note that we will thoroughly check your execution times, and any evidence of cheating will result in a deduction of 5 points.
+
+### Literature and additional materials
+
+1. [Intel intristic guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#techs=AVX_ALL) 
+
+### Analysis and Reporting:
+Describe your results in a report (two-page max).
 
 
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
-
-```
-cd existing_repo
-git remote add origin https://repo.sling.si/ratkop/third_howework_cs.git
-git branch -M main
-git push -uf origin main
-```
-
-## Integrate with your tools
-
-- [ ] [Set up project integrations](https://repo.sling.si/ratkop/third_howework_cs/-/settings/integrations)
-
-## Collaborate with your team
-
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
-
-## Test and Deploy
-
-Use the built-in continuous integration in GitLab.
-
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
-
-***
-
-# Editing this README
-
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
-
-## Suggestions for a good README
-
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
-
-## Name
-Choose a self-explaining name for your project.
-
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.

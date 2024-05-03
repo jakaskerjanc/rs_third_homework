@@ -9,12 +9,16 @@
 #include "stb_image.h"
 #include "stb_image_write.h"
 
-
-#define NUM_CLUSTERS 8
+#define NUM_CLUSTERS 4
 #define MAX_ITERATIONS 10000
 #define THRESHOLD 0.0001
 
 
+unsigned long long rdtsc() {
+    unsigned int hi, lo;
+    __asm__ __volatile__ ("rdtsc" : "=a" (lo), "=d" (hi));
+    return ((unsigned long long)lo) | (((unsigned long long)hi) << 32);
+}
 
 // Define image structure
 // struct Image {
@@ -29,10 +33,6 @@ struct Cluster {
     int* points;
 };
 
-// Function to calculate Euclidean distance between two points
-double distance(double p1, double p2) {
-    return fabs(p1 - p2);
-}
 
 // Function to assign points (pixels) to clusters
 void assign_points_to_clusters(struct Cluster clusters[], double* image, int image_size) {
@@ -110,14 +110,7 @@ void k_means(double* image, int image_size, struct Cluster* clusters) {
         // print centroids
         assign_points_to_clusters(clusters, image, image_size);
         // Update centroids
-
-       
         update_centroids(clusters, image, image_size);
-        printf("Cluster centroids:\n");
-        for (int i = 0; i < NUM_CLUSTERS; i++) {
-            printf("Cluster %d: %.2f\n", i + 1, clusters[i].centroid);
-        }
-        assign_points_to_clusters(clusters, image, image_size);
 
         // Calculate difference between old and new centroids
         error = 0;
@@ -127,16 +120,11 @@ void k_means(double* image, int image_size, struct Cluster* clusters) {
         iterations++;
 
 
-        printf("Iteration %d: error = %.2f\n", iterations, error);
 
 
     } while (error > THRESHOLD && iterations < MAX_ITERATIONS);
     
-    //Print cluster centroids
-    printf("Cluster centroids:\n");
-    for (int i = 0; i < NUM_CLUSTERS; i++) {
-        printf("Cluster %d: %.2f\n", i + 1, clusters[i].centroid);
-    }
+  
 
     // Free memory
     // for (int i = 0; i < NUM_CLUSTERS; i++) {
@@ -163,6 +151,7 @@ void segment_image(double *image, struct Cluster* clusters, int image_size) {
 
 int main() {
     // Define sample grayscale image
+    long long unsigned int start, end, cycles;
 
     // Load image from file and allocate space for the output image
     char image_name[] = "./bosko_grayscale.jpg";
@@ -178,7 +167,7 @@ int main() {
     printf("Image is %d bytes per pixel.\n", cpp);
     // Save grayscale image to file
     printf("Size of image is %ld, %ld\n", sizeof(unsigned char), sizeof(h_imageIn));
-    //stbi_write_jpg("bosko_grayscale.png", width, height,STBI_grey, h_imageIn, 100);
+    stbi_write_jpg("bosko_grayscale.jpg", width, height,STBI_grey, h_imageIn, 100);
     
     
 
@@ -202,7 +191,13 @@ int main() {
 
 
     // Perform K-means clustering
+    
+    start = rdtsc();
     k_means(image_pixels, image_size, clusters);
+    end = rdtsc();
+    cycles = end - start;
+    printf("Time for K-means: %lld cycles\n", cycles);
+
 
     //print cluster centroids
     printf("Cluster centroids:\n");

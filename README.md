@@ -55,6 +55,7 @@ For each scenario, measure the execution time of both the scalar and vectorized 
 
 As a bonus challenge, you are invited to further optimize the inference phase of the MLP network and K-means algorithm by leveraging AVX-512 instructions, available on the AMD Genoa processor series deployed on the cluster. This task involves extending your existing AVX2 vectorized solution to utilize the wider AVX-512 registers and instruction set, allowing for greater parallelism and potentially higher throughput. Focus on adapting the same test function, now optimized for AVX-512, and ensure that the implementation maintains the same numerical correctness as previous versions. Once completed, analyze the performance by comparing the runtime of scalar, AVX2, and AVX-512 implementations on the same input data.  
 
+Tip: Use the `-march=znver4` flag to compile your code with AVX-512 support.
 
 ## Literature and additional materials
 

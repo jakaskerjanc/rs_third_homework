@@ -9,10 +9,7 @@ jacobi.c
 *.out
 backup
 my_program.dSYM/
-*.txt
 backup2/
 log/
 train_models.sh
-*_vec.c
 *_train.c
-*.sh

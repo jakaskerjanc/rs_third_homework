@@ -1,0 +1,24 @@
+Hidden Layer Size: 128
+Double Precision - Scalar: 0.0001666000 seconds
+Double Precision - Vectorized: 0.0000512000 seconds
+Double Precision - Speedup: 3.2539062500
+Float Precision - Scalar: 0.0001520000 seconds
+Float Precision - Vectorized: 0.0000232000 seconds
+Float Precision - Speedup: 6.5517241379
+----------------------------------------
+Hidden Layer Size: 256
+Double Precision - Scalar: 0.0003480000 seconds
+Double Precision - Vectorized: 0.0001304000 seconds
+Double Precision - Speedup: 2.6687116564
+Float Precision - Scalar: 0.0003354000 seconds
+Float Precision - Vectorized: 0.0000552000 seconds
+Float Precision - Speedup: 6.0760869565
+----------------------------------------
+Hidden Layer Size: 512
+Double Precision - Scalar: 0.0007710000 seconds
+Double Precision - Vectorized: 0.0002642000 seconds
+Double Precision - Speedup: 2.9182437547
+Float Precision - Scalar: 0.0006860000 seconds
+Float Precision - Vectorized: 0.0001260000 seconds
+Float Precision - Speedup: 5.4444444444
+----------------------------------------

@@ -22,3 +22,11 @@ Float Precision - Scalar: 0.0006860000 seconds
 Float Precision - Vectorized: 0.0001260000 seconds
 Float Precision - Speedup: 5.4444444444
 ----------------------------------------
+Hidden Layer Size: 1024
+Double Precision - Scalar: 0.0012676000 seconds
+Double Precision - Vectorized: 0.0010010000 seconds
+Double Precision - Speedup: 1.2663336663
+Float Precision - Scalar: 0.0015278000 seconds
+Float Precision - Vectorized: 0.0001774000 seconds
+Float Precision - Speedup: 8.6121758737
+----------------------------------------

@@ -1,0 +1,13 @@
+Implementation,Precision,Clusters,Average_Cycles
+SCA,double,4,754511733
+SCA,double,8,762217240
+SCA,double,16,756383474
+SCA,float,4,703422053
+SCA,float,8,708101626
+SCA,float,16,716112858
+VEC,double,4,782808773
+VEC,double,8,785181718
+VEC,double,16,789883332
+VEC,float,4,627284295
+VEC,float,8,615494235
+VEC,float,16,626315844

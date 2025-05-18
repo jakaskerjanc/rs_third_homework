@@ -23,8 +23,6 @@ Using the `time()` function, your task is to assess the execution time of the ML
 
 For each scenario, you will assess the performance for different sizes of hidden layers, specifically 128, 256, 512, and 1024 neurons. The other parameters of the MLP network, such as the number of input neurons and output neurons, will remain as defined in the provided code. Perform the measurements over five attempts and calculate the mean of the execution times. Use these results to determine the speedup ratio achieved by vectorization.
 
-
-
 ## Task 2: K-means clustering and image processing 
 
 The k-means algorithm is an unsupervised machine-learning technique used for clustering data into distinct groups based on similarities in their features. In image processing, K-means finds applications in tasks like image segmentation and color quantization. K-means can partition an image into segments with similar pixel values by treating each pixel as a data point in a high-dimensional space. This segmentation is beneficial in various image analysis tasks, such as object detection, image compression, and image enhancement. For instance, for color quantization, K-means clusters similar colors together, reducing the number of distinct colors in an image while preserving its visual quality. This makes the image easier to process and store without significant loss of information. The K-means algorithm offers an efficient and practical approach to analyzing and manipulating images in various applications.
@@ -49,19 +47,13 @@ Using the `rdtsc()` function, your task is to assess the execution time of the K
 
 For each scenario, measure the execution time of both the scalar and vectorized versions of the K-means algorithm using `rdtsc()`, then calculate the ratio of execution times to determine the speedup achieved by vectorization. 
 
+- Create 4 files, `k-means_sca_double.c, k-means_sca_float.c, k-means_vec_double.c, k-means_vec_float.c` 
+- Number of clusters is passed as `NUM_CLUSTERS`
 
-
-### Bonus challenge: Unleash the power of AVX512 (5 points)
-
-As a bonus challenge, you are invited to further optimize the inference phase of the MLP network and K-means algorithm by leveraging AVX-512 instructions, available on the AMD Genoa processor series deployed on the cluster. This task involves extending your existing AVX2 vectorized solution to utilize the wider AVX-512 registers and instruction set, allowing for greater parallelism and potentially higher throughput. Focus on adapting the same test function, now optimized for AVX-512, and ensure that the implementation maintains the same numerical correctness as previous versions. Once completed, analyze the performance by comparing the runtime of scalar, AVX2, and AVX-512 implementations on the same input data.  
-
-Tip: Use the `-march=znver4` flag to compile your code with AVX-512 support.
+- Create `run_benchmark.sh`, where the program is benchmarked.
+- Utilize `srun` (we are on HPC).
+- Write the results to `results/task2_results.txt`.
 
 ## Literature and additional materials
 
 1. [Intel intristic guide](https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html#techs=AVX_ALL) 
-
-## Analysis and Reporting:
-Describe your results in a report (two-page max).
-
-

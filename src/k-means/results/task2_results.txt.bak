@@ -1,0 +1,181 @@
+Testing sca implementation with double precision and 4 clusters
+
+Iteration 1:
+Time for K-means: 745958974 cycles
+Iteration 2:
+Time for K-means: 748594358 cycles
+Iteration 3:
+Time for K-means: 744120182 cycles
+Iteration 4:
+Time for K-means: 754384576 cycles
+Iteration 5:
+Time for K-means: 781298204 cycles
+
+
+Testing sca implementation with double precision and 8 clusters
+
+Iteration 1:
+Time for K-means: 602402800 cycles
+Iteration 2:
+Time for K-means: 590993900 cycles
+Iteration 3:
+Time for K-means: 591707460 cycles
+Iteration 4:
+Time for K-means: 593627160 cycles
+Iteration 5:
+Time for K-means: 594664000 cycles
+
+
+Testing sca implementation with double precision and 16 clusters
+
+Iteration 1:
+Time for K-means: 771392892 cycles
+Iteration 2:
+Time for K-means: 775940858 cycles
+Iteration 3:
+Time for K-means: 757536896 cycles
+Iteration 4:
+Time for K-means: 744574616 cycles
+Iteration 5:
+Time for K-means: 770786896 cycles
+
+
+Testing sca implementation with float precision and 4 clusters
+
+Iteration 1:
+Time for K-means: 552465820 cycles
+Iteration 2:
+Time for K-means: 549698620 cycles
+Iteration 3:
+Time for K-means: 551483540 cycles
+Iteration 4:
+Time for K-means: 551860200 cycles
+Iteration 5:
+Time for K-means: 552968120 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.63
+Cluster 4: 0.82
+Cycles: cycles
+
+Testing sca implementation with float precision and 8 clusters
+
+Iteration 1:
+Time for K-means: 704919506 cycles
+Iteration 2:
+Time for K-means: 700301748 cycles
+Iteration 3:
+Time for K-means: 689389522 cycles
+Iteration 4:
+Time for K-means: 718400034 cycles
+Iteration 5:
+Time for K-means: 707001126 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.63
+Cluster 4: 0.82
+Cycles: cycles
+
+Testing sca implementation with float precision and 16 clusters
+
+Iteration 1:
+Time for K-means: 550939640 cycles
+Iteration 2:
+Time for K-means: 551761120 cycles
+Iteration 3:
+Time for K-means: 559835940 cycles
+Iteration 4:
+Time for K-means: 558400500 cycles
+Iteration 5:
+Time for K-means: 553036120 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.63
+Cluster 4: 0.82
+Cycles: cycles
+
+Testing vec implementation with double precision and 4 clusters
+
+Iteration 1:
+Time for K-means: 795253068 cycles
+Iteration 2:
+Time for K-means: 772991436 cycles
+Iteration 3:
+Time for K-means: 774740602 cycles
+Iteration 4:
+Time for K-means: 783673762 cycles
+Iteration 5:
+Time for K-means: 900909832 cycles
+
+
+Testing vec implementation with double precision and 8 clusters
+
+Iteration 1:
+Time for K-means: 601179720 cycles
+Iteration 2:
+Time for K-means: 598002580 cycles
+Iteration 3:
+Time for K-means: 593011060 cycles
+Iteration 4:
+Time for K-means: 594653280 cycles
+Iteration 5:
+Time for K-means: 601511980 cycles
+
+
+Testing vec implementation with double precision and 16 clusters
+
+Iteration 1:
+Time for K-means: 780095162 cycles
+Iteration 2:
+Time for K-means: 778728908 cycles
+Iteration 3:
+Time for K-means: 780540938 cycles
+Iteration 4:
+Time for K-means: 774044010 cycles
+Iteration 5:
+Time for K-means: 778474644 cycles
+
+
+Testing vec implementation with float precision and 4 clusters
+
+Iteration 1:
+Time for K-means: 461045680 cycles
+Iteration 2:
+Time for K-means: 463494080 cycles
+Iteration 3:
+Time for K-means: 460416320 cycles
+Iteration 4:
+Time for K-means: 458199220 cycles
+Iteration 5:
+Time for K-means: 461011140 cycles
+
+
+Testing vec implementation with float precision and 8 clusters
+
+Iteration 1:
+Time for K-means: 615436068 cycles
+Iteration 2:
+Time for K-means: 618737356 cycles
+Iteration 3:
+Time for K-means: 609134208 cycles
+Iteration 4:
+Time for K-means: 614865832 cycles
+Iteration 5:
+Time for K-means: 622878094 cycles
+
+
+Testing vec implementation with float precision and 16 clusters
+
+Iteration 1:
+Time for K-means: 590263020 cycles
+Iteration 2:
+Time for K-means: 565920240 cycles
+Iteration 3:
+Time for K-means: 575507340 cycles
+Iteration 4:
+Time for K-means: 553875700 cycles
+Iteration 5:
+Time for K-means: 552682520 cycles

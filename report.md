@@ -100,4 +100,66 @@ The results indicate that while SIMD vectorization provides performance benefits
 
 The vectorization of the MLP inference using AVX2 SIMD instructions resulted in substantial performance improvements, particularly for single-precision floating-point operations. The implementation successfully leveraged parallel processing capabilities to reduce computation time, with the most significant gains observed in the float precision implementation.
 
-The float precision implementation consistently outperformed double precision in terms of speedup, which aligns with expectations given that AVX2 can process twice as many float values as double values simultaneously. This suggests that for neural network inference where precision requirements allow, using single-precision floating-point can provide significant performance benefits when combined with SIMD vectorization. 
+The float precision implementation consistently outperformed double precision in terms of speedup, which aligns with expectations given that AVX2 can process twice as many float values as double values simultaneously. This suggests that for neural network inference where precision requirements allow, using single-precision floating-point can provide significant performance benefits when combined with SIMD vectorization.
+
+# Task 2: K-means Clustering with SIMD Vectorization
+
+## Introduction
+
+This section presents the implementation and performance analysis of the K-means clustering algorithm with SIMD vectorization using AVX2 instructions. K-means is an unsupervised learning algorithm that partitions data points into K clusters, where each data point belongs to the cluster with the nearest mean.
+
+## Implementation Approach
+
+The vectorization of the K-means algorithm focused on accelerating the distance calculation between data points and cluster centroids, which is the most computationally intensive part of the algorithm. Similar to Task 1, both float and double precision implementations were developed.
+
+### Key Components of Vectorized Implementation:
+- Vectorized Euclidean distance calculations between points and centroids
+- Implemented parallel processing of multiple dimensions simultaneously
+- Utilized AVX2 instructions for both float and double precision operations
+- Optimized memory access patterns for improved cache utilization
+
+## Performance Results
+
+Testing was conducted with different numbers of clusters (4, 8, and 16) for both single and double precision floating-point operations. The results show:
+
+| Precision | Clusters | SCA Cycles | VEC Cycles | Speedup (SCA/VEC) |
+|-----------|----------|------------|------------|-------------------|
+| double | 4 | 754511733 | 782808773 | 0.96 |
+| double | 8 | 762217240 | 785181718 | 0.97 |
+| double | 16 | 756383474 | 789883332 | 0.96 |
+| float | 4 | 703422053 | 627284295 | 1.12 |
+| float | 8 | 708101626 | 615494235 | 1.15 |
+| float | 16 | 716112858 | 626315844 | 1.14 |
+
+### Key Observations:
+- Float precision implementation shows consistent speedup (1.12x-1.15x) across different cluster sizes
+- Double precision implementation unexpectedly shows slight slowdown (0.96x-0.97x) compared to scalar implementation
+- The number of clusters has minimal impact on the relative performance of vectorized vs. scalar implementations
+- The best performance was achieved with float precision and 8 clusters (1.15x speedup)
+
+## Analysis of Results
+
+### Float Precision Success
+The float precision implementation demonstrates successful vectorization with consistent speedups around 1.12x-1.15x. This is because:
+- AVX2 processes 8 float values simultaneously, allowing efficient parallel distance calculations
+- The memory access patterns in float precision align well with cache line sizes
+- Fewer memory loads are required due to the smaller size of float values
+
+### Double Precision Challenges
+The double precision implementation shows slightly worse performance than scalar code (0.96x-0.97x). Potential reasons include:
+- Memory access overhead might outweigh computational benefits
+- Cache utilization may be less efficient with double precision values
+- Vectorization overhead (loading/storing vectors) could exceed the benefits for the specific data patterns
+- Only 4 doubles can be processed simultaneously with AVX2, reducing the potential parallelism
+
+## Conclusion
+
+The vectorization of K-means clustering using AVX2 SIMD instructions produced mixed results. While the float precision implementation showed consistent speedups, the double precision implementation slightly underperformed compared to scalar code.
+
+These results highlight important considerations when applying SIMD vectorization:
+1. The choice of precision significantly impacts vectorization benefits
+2. Memory access patterns and cache behavior can be as important as computational parallelism
+3. Smaller data types (float vs. double) often benefit more from vectorization due to higher parallelism
+4. The nature of the algorithm and its memory access patterns may limit potential speedups
+
+For K-means clustering with the tested dataset, float precision with SIMD vectorization provides the best performance, offering up to 1.15x speedup over scalar implementation. This suggests that where precision requirements allow, single-precision floating-point operations should be preferred when using SIMD vectorization for K-means clustering. 

@@ -1,0 +1,243 @@
+Testing sca implementation with double precision and 4 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Size of image is 1, 8
+Iteration 1:
+Time for K-means: 765301866 cycles
+Iteration 2:
+Time for K-means: 743191088 cycles
+Iteration 3:
+Time for K-means: 753722274 cycles
+Iteration 4:
+Time for K-means: 749579126 cycles
+Iteration 5:
+Time for K-means: 760764310 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing sca implementation with double precision and 8 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Size of image is 1, 8
+Iteration 1:
+Time for K-means: 747830644 cycles
+Iteration 2:
+Time for K-means: 751443722 cycles
+Iteration 3:
+Time for K-means: 764473730 cycles
+Iteration 4:
+Time for K-means: 771587844 cycles
+Iteration 5:
+Time for K-means: 775750260 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing sca implementation with double precision and 16 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Size of image is 1, 8
+Iteration 1:
+Time for K-means: 747429250 cycles
+Iteration 2:
+Time for K-means: 752201852 cycles
+Iteration 3:
+Time for K-means: 765590752 cycles
+Iteration 4:
+Time for K-means: 759625074 cycles
+Iteration 5:
+Time for K-means: 757070442 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing sca implementation with float precision and 4 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 701936474 cycles
+Iteration 2:
+Time for K-means: 711434318 cycles
+Iteration 3:
+Time for K-means: 694250074 cycles
+Iteration 4:
+Time for K-means: 701805814 cycles
+Iteration 5:
+Time for K-means: 707683586 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.63
+Cluster 4: 0.82
+Cycles: cycles
+
+Testing sca implementation with float precision and 8 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 719078432 cycles
+Iteration 2:
+Time for K-means: 718237120 cycles
+Iteration 3:
+Time for K-means: 705864374 cycles
+Iteration 4:
+Time for K-means: 699149226 cycles
+Iteration 5:
+Time for K-means: 698178978 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.63
+Cluster 4: 0.82
+Cycles: cycles
+
+Testing sca implementation with float precision and 16 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 699775600 cycles
+Iteration 2:
+Time for K-means: 698420660 cycles
+Iteration 3:
+Time for K-means: 710566678 cycles
+Iteration 4:
+Time for K-means: 729595880 cycles
+Iteration 5:
+Time for K-means: 742205470 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.63
+Cluster 4: 0.82
+Cycles: cycles
+
+Testing vec implementation with double precision and 4 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 776013270 cycles
+Iteration 2:
+Time for K-means: 781525616 cycles
+Iteration 3:
+Time for K-means: 783033722 cycles
+Iteration 4:
+Time for K-means: 781826226 cycles
+Iteration 5:
+Time for K-means: 791645030 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing vec implementation with double precision and 8 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 787531130 cycles
+Iteration 2:
+Time for K-means: 779118416 cycles
+Iteration 3:
+Time for K-means: 791044026 cycles
+Iteration 4:
+Time for K-means: 784858478 cycles
+Iteration 5:
+Time for K-means: 783356538 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing vec implementation with double precision and 16 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 798031768 cycles
+Iteration 2:
+Time for K-means: 789394222 cycles
+Iteration 3:
+Time for K-means: 784897952 cycles
+Iteration 4:
+Time for K-means: 781741022 cycles
+Iteration 5:
+Time for K-means: 795351696 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing vec implementation with float precision and 4 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 622532398 cycles
+Iteration 2:
+Time for K-means: 614675450 cycles
+Iteration 3:
+Time for K-means: 620536124 cycles
+Iteration 4:
+Time for K-means: 645412470 cycles
+Iteration 5:
+Time for K-means: 633265032 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing vec implementation with float precision and 8 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 608700454 cycles
+Iteration 2:
+Time for K-means: 611461576 cycles
+Iteration 3:
+Time for K-means: 614405222 cycles
+Iteration 4:
+Time for K-means: 627449098 cycles
+Iteration 5:
+Time for K-means: 615454824 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+
+Testing vec implementation with float precision and 16 clusters
+Loaded image ./bosko_grayscale.jpg of size 4032x3024.
+Image is 3 bytes per pixel.
+Iteration 1:
+Time for K-means: 624583426 cycles
+Iteration 2:
+Time for K-means: 629858630 cycles
+Iteration 3:
+Time for K-means: 626484070 cycles
+Iteration 4:
+Time for K-means: 632208618 cycles
+Iteration 5:
+Time for K-means: 618444474 cycles
+Cluster centroids:
+Cluster 1: 0.13
+Cluster 2: 0.44
+Cluster 3: 0.64
+Cluster 4: 0.83
+Cycles: cycles
+

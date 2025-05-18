@@ -1,32 +1,32 @@
 Hidden Layer Size: 128
-Double Precision - Scalar: 0.0001666000 seconds
-Double Precision - Vectorized: 0.0000512000 seconds
-Double Precision - Speedup: 3.2539062500
-Float Precision - Scalar: 0.0001520000 seconds
-Float Precision - Vectorized: 0.0000232000 seconds
-Float Precision - Speedup: 6.5517241379
+Double Precision - Scalar: 0.0004062000 seconds
+Double Precision - Vectorized: 0.0002910000 seconds
+Double Precision - Speedup: 1.3958762887
+Float Precision - Scalar: 0.0003976000 seconds
+Float Precision - Vectorized: 0.0002328000 seconds
+Float Precision - Speedup: 1.7079037801
 ----------------------------------------
 Hidden Layer Size: 256
-Double Precision - Scalar: 0.0003480000 seconds
-Double Precision - Vectorized: 0.0001304000 seconds
-Double Precision - Speedup: 2.6687116564
-Float Precision - Scalar: 0.0003354000 seconds
-Float Precision - Vectorized: 0.0000552000 seconds
-Float Precision - Speedup: 6.0760869565
+Double Precision - Scalar: 0.0008754000 seconds
+Double Precision - Vectorized: 0.0006086000 seconds
+Double Precision - Speedup: 1.4383831745
+Float Precision - Scalar: 0.0008210000 seconds
+Float Precision - Vectorized: 0.0004412000 seconds
+Float Precision - Speedup: 1.8608340888
 ----------------------------------------
 Hidden Layer Size: 512
-Double Precision - Scalar: 0.0007710000 seconds
-Double Precision - Vectorized: 0.0002642000 seconds
-Double Precision - Speedup: 2.9182437547
-Float Precision - Scalar: 0.0006860000 seconds
-Float Precision - Vectorized: 0.0001260000 seconds
-Float Precision - Speedup: 5.4444444444
+Double Precision - Scalar: 0.0018196000 seconds
+Double Precision - Vectorized: 0.0014894000 seconds
+Double Precision - Speedup: 1.2217000134
+Float Precision - Scalar: 0.0017032000 seconds
+Float Precision - Vectorized: 0.0009590000 seconds
+Float Precision - Speedup: 1.7760166840
 ----------------------------------------
 Hidden Layer Size: 1024
-Double Precision - Scalar: 0.0012676000 seconds
-Double Precision - Vectorized: 0.0010010000 seconds
-Double Precision - Speedup: 1.2663336663
-Float Precision - Scalar: 0.0015278000 seconds
-Float Precision - Vectorized: 0.0001774000 seconds
-Float Precision - Speedup: 8.6121758737
+Double Precision - Scalar: 0.0055642000 seconds
+Double Precision - Vectorized: 0.0023344000 seconds
+Double Precision - Speedup: 2.3835675120
+Float Precision - Scalar: 0.0037502000 seconds
+Float Precision - Vectorized: 0.0019096000 seconds
+Float Precision - Speedup: 1.9638667784
 ----------------------------------------

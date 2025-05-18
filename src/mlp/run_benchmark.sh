@@ -7,10 +7,10 @@
 #SBATCH --time=01:00:00
 
 # Compile all implementations
-gcc -O3 -mavx2 -o main_test_double_sca main_test_double_sca.c -lm
-gcc -O3 -mavx2 -o main_test_float_sca main_test_float_sca.c -lm
-gcc -O3 -mavx2 -o main_test_double_vec main_test_double_vec.c -lm
-gcc -O3 -mavx2 -o main_test_float_vec main_test_float_vec.c -lm
+gcc -mavx2 -o main_test_double_sca main_test_double_sca.c -lm
+gcc -mavx2 -o main_test_float_sca main_test_float_sca.c -lm
+gcc -mavx2 -o main_test_double_vec main_test_double_vec.c -lm
+gcc -mavx2 -o main_test_float_vec main_test_float_vec.c -lm
 
 # Hidden layer sizes to test
 hidden_sizes=(128 256 512 1024)
